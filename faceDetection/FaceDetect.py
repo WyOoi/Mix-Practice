@@ -1,4 +1,4 @@
-import cv2
+import cv2 #opencv library
 
 alg = "haarcascade_frontalface_default.xml"
 haar_cascade = cv2.CascadeClassifier(alg)
@@ -14,7 +14,8 @@ while True:
         cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
     cv2.imshow("FaceDetection", img)
     key = cv2.waitKey(10)
-    if key == ord("q"):
+    if key == ord("q"): #Press q on keyboard to exit the code
         break
+        
 cam.release()
 cv2.destroyAllWindows()
